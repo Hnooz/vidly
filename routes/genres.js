@@ -5,7 +5,6 @@ import admin from '../middleware/admin.js'
 const router = Router()
 
 router.get('/', async (req, res) => {
-    throw new Error('Not implemented');
     const genre = await Genre.find().sort('name')
     res.send(genre)
 })
